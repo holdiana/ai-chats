@@ -1,18 +1,98 @@
-# Getting Started with Create React App
+# AI Chats App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a monorepo for the project.
+This is a primary frontend part for the application.
 
-## Available Scripts
+[Production url](https://.../)
 
-In the project directory, you can run:
+[Staging url](https://.../)
 
-### `npm start`
+## If you're open the repo first time:
+
+Prerequisites:
+
+- `node -v` - 16.17.0
+- install git cli
+
+1. Clone the repo
+
+```
+git clone https://github.com/holdiana/ai-chats.git
+```
+
+2. Install dependencies
+
+```
+npm install
+
+- Material UI for most of the components
+- Styling using UI theme and literals for custom styling
+- Eslint, Stylelint, Prettier, Husky for the code quality
+- Auth0 for authorisation
+
+```
+
+3. Install husky (if it hasn't yet automatically)
+
+```
+npm add husky --dev
+```
+
+4. Configure Eslint for your IDE
+5. Set environment variables for backend and frontend to `.env` files (get them from me)
+
+## How to run locally
+
+Run:
+
+```
+npm start
+npm run dev
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+
+Build and run:
+
+```
+
+npm run build
+npm run build && npm start
+
+## Contribution
+
+1. Go to `develop` branch and pull the latest version.
+2. Create a branch with the name `feature/your-feature-name` from `develop`. The first part is type that can be 'feature', 'bugfix' or 'docs'
+3. Code, lint, commit and push into new branch
+4. If you're branch gets outdated (new commits in `develop`), please rebase it
+5. Create a PR with the detailed description and photo/video
+6. Close PR via `Squash and merge`. Do not merge without approval
+7. Check it on staging as soon as it is deployed
+
+[More details](https://www.atlassian.com/ru/git/tutorials/comparing-workflows/gitflow-workflow)
+
+## Project's structure
+
+- Declare styles in the `*.styled.js` file near your component
+- Create a folder in pages for the new separate page
+- Create a folder in `components` under `pages/**component-name**/components/` for the component which is exclusive for this page
+- Create a folder in `shared` for the component that might be used somewhere else later
+- Create a component in case you're using a library for the customised component. Do not customise the component where you're going to use it.
+
+## Work with dependencies
+
+Install common dependencies for package , example for installing lodash:
+
+```
+
+npx lerna add lodash packages/\*
+
+npx lerna add @types/lodash packages/\* --dev
+
+```
 
 ### `npm test`
 
@@ -29,42 +109,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
